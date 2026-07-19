@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chethan Rai | Full Stack Developer & Software Engineer</title>
+    <meta name="description" content="Portfolio of Chethan Rai, a Full Stack Developer & Software Engineer specializing in high-performance web applications, modern UI/UX design, and clean, scalable code.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Glow Blobs -->
+    <div class="glow-blob glow-1"></div>
+    <div class="glow-blob glow-2"></div>
+    <div class="glow-blob glow-3"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">CR<span>.</span></a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <a href="#contact" class="btn btn-outline cv-btn">
+                Download CV <i class="fa-solid fa-download"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h3 class="hero-subtitle">Hi, I'm</h3>
+                <h1 class="hero-title">Chethan <span class="gradient-text">Rai</span></h1>
+                <h2 class="hero-tagline">Full Stack Developer</h2>
+                <p class="hero-desc">
+                    I'm Chethan Rai, a Full Stack Developer passionate about creating modern, responsive and high-performance websites. I help businesses, startups and individuals establish a strong online presence through custom web solutions with clean design, optimized performance and great user experience.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-dark">Get In Touch <i class="fa-solid fa-paper-plane"></i></a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:contact@chethanrai.com" class="social-icon" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <div class="laptop-container">
+                    <img src="assets/hero_laptop.png" alt="Sleek laptop showing code and dashboards" class="laptop-img">
+                    <div class="floating-badge badge-code">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title">About <span class="accent-text">Me</span></h2>
+            
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="profile-icon-wrapper">
+                        <div class="profile-glow"></div>
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <p class="about-text">
+                        I'm a passionate Full Stack Developer with a strong interest in building clean, efficient and user-centric digital solutions. I enjoy turning complex problems into simple, beautiful and scalable web applications. Constantly learning, exploring new technologies and working on real-world projects to create better experiences for users and businesses.
+                    </p>
+                </div>
+                
+                <div class="about-right">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Education</h4>
+                            <p>Master of Computer Applications (MCA)</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Uppala, Kerala, India</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Interests</h4>
+                            <p>Web Development, Cloud Computing, Database Management, UI/UX Design</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card decorative-grid-card">
+                        <div class="grid-dot-pattern"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Services Section -->
+    <section id="services" class="services-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center">My <span class="accent-text">Services</span></h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Custom, responsive and high-performance websites for your business or idea.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Application Development</h3>
+                    <p>Scalable and secure web applications with modern technologies.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Clean, modern and user-friendly designs that create great experiences.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <h3>Website Redesign & Optimization</h3>
+                    <p>Make your existing website faster, better and more user-focused.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Tech <span class="accent-text">Stack</span></h2>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-logo logo-html">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <span>HTML</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <span>CSS</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-js">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-react">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <span>React</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-node">
+                        <i class="fa-brands fa-node-js"></i>
+                    </div>
+                    <span>Node.js</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-mysql">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-logo logo-git">
+                        <i class="fa-brands fa-git-alt"></i>
+                    </div>
+                    <span>Git & GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Featured <span class="accent-text">Projects</span></h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project_doctor.png" alt="Doctor Appointment System Preview" class="project-img">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-overlay" aria-label="View Project Details">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Doctor Appointment System</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-external-link" aria-label="Open Doctor Appointment System in a new tab">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p>A web application that allows patients to book, manage and track appointments with doctors.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project_travel.png" alt="Travel Landing Page Preview" class="project-img">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-overlay" aria-label="View Project Details">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Travel Landing Page</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-external-link" aria-label="Open Travel Landing Page in a new tab">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p>A responsive travel landing page with modern UI, smooth animations and great UX.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/project_dashboard.png" alt="Dashboard UI Preview" class="project-img">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="project-link-overlay" aria-label="View Project Details">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Dashboard UI</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="project-external-link" aria-label="Open Dashboard UI in a new tab">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <p>A responsive admin dashboard UI with charts, widgets and modern design.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Chart.js</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center project-btn-container">
+                <a href="#projects" class="btn btn-dark">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Why Choose <span class="accent-text">Me</span></h2>
+            
+            <div class="why-choose-grid">
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="choose-content">
+                        <h3>Quality Work</h3>
+                        <p>Clean, scalable & well-documented code</p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <div class="choose-content">
+                        <h3>Client Focused</h3>
+                        <p>Clear communication & on-time delivery</p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <div class="choose-content">
+                        <h3>Continuous Learning</h3>
+                        <p>Always exploring new technologies</p>
+                    </div>
+                </div>
+
+                <div class="choose-card">
+                    <div class="choose-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="choose-content">
+                        <h3>Long-Term Support</h3>
+                        <p>Support even after project delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Process Section -->
+    <section class="process-section scroll-reveal">
+        <div class="container">
+            <h2 class="section-title text-center">My <span class="accent-text">Process</span></h2>
+            
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="process-icon-wrapper">
+                        <i class="fa-regular fa-comments"></i>
+                    </div>
+                    <div class="process-info">
+                        <h3>1. Understand</h3>
+                        <p>Discuss requirements & goals</p>
+                    </div>
+                </div>
+                
+                <div class="process-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="process-icon-wrapper">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <div class="process-info">
+                        <h3>2. Plan & Design</h3>
+                        <p>Create strategy & UI/UX design</p>
+                    </div>
+                </div>
+
+                <div class="process-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="process-icon-wrapper">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="process-info">
+                        <h3>3. Develop</h3>
+                        <p>Build with clean & scalable code</p>
+                    </div>
+                </div>
+
+                <div class="process-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="process-icon-wrapper">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="process-info">
+                        <h3>4. Deliver & Support</h3>
+                        <p>Launch and provide ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section scroll-reveal">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="cta-left">
+                    <div class="cta-icon">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                    <div class="cta-text">
+                        <h2>Let's Build Something Great Together!</h2>
+                        <p>Have a project idea or need a professional website? I'm here to help you bring it to life.</p>
+                    </div>
+                </div>
+                <div class="cta-right">
+                    <a href="mailto:contact@chethanrai.com" class="btn btn-cta">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo">CR<span>.</span></a>
+                <p>Building better digital experiences, one project at a time.</p>
+                <p class="copyright">&copy; 2026 Chethan Rai. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">Website Development</a></li>
+                    <li><a href="#services">Web Application Development</a></li>
+                    <li><a href="#services">UI/UX Design</a></li>
+                    <li><a href="#services">Website Redesign</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Let's Connect</h3>
+                <ul class="footer-social-links">
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="mailto:contact@chethanrai.com"><i class="fa-regular fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal (Triggered by Get In Touch) -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="contact-modal">
+            <button class="close-modal" id="closeModal" aria-label="Close Contact Form Modal">&times;</button>
+            <h3>Get In Touch</h3>
+            <p>Send a message and I'll get back to you as soon as possible.</p>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="259cd9dc-c60d-4dd8-9d0f-767310a46dfd">
+                <input type="hidden" name="subject" value="New Portfolio Message">
+                <input type="hidden" name="from_name" value="Chethan Rai Portfolio">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Hi Chethan, I'd like to collaborate on..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+            <div class="form-success-msg" id="formSuccessMsg">
+                <i class="fa-solid fa-circle-check"></i>
+                <h4>Message Sent Successfully!</h4>
+                <p>Thank you for reaching out. I'll get back to you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+</body>
+</html>
