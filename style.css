@@ -4,6 +4,7 @@
 :root {
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
     
     /* Premium Color Palette */
     --bg-deep: #05040a;
@@ -12,6 +13,8 @@
     --bg-card-hover: #141232;
     --border-color: rgba(140, 82, 255, 0.12);
     --border-hover: rgba(140, 82, 255, 0.35);
+    --bg-header: rgba(5, 4, 10, 0.8);
+    --border-header: rgba(255, 255, 255, 0.03);
     
     --text-primary: #ffffff;
     --text-secondary: #a2a0bd;
@@ -26,6 +29,31 @@
     --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
     --glow-shadow: 0 0 30px rgba(140, 82, 255, 0.2);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Mode Theme Overrides - Premium Peach Orange Palette */
+:root.light-mode, html.light-mode, body.light-mode, .light-mode {
+    --bg-deep: #FAF6F2;
+    --bg-dark: #F0EAE4;
+    --bg-card: #ffffff;
+    --bg-card-hover: #FCFAF7;
+    --border-color: rgba(216, 90, 48, 0.15);
+    --border-hover: rgba(216, 90, 48, 0.4);
+    --bg-header: rgba(250, 246, 242, 0.85);
+    --border-header: rgba(216, 90, 48, 0.05);
+    
+    --text-primary: #2F4156;
+    --text-secondary: #567C8D;
+    --text-muted: #8CA1AF;
+    
+    --accent-purple: #D85A30; /* Terracotta Orange accent */
+    --accent-pink: #F5CBA7;   /* Peach secondary accent */
+    --accent-violet: #A23E1E;
+    
+    --gradient-primary: linear-gradient(135deg, #D85A30, #F5CBA7);
+    --gradient-glow: linear-gradient(135deg, rgba(216, 90, 48, 0.15), rgba(245, 203, 167, 0.15));
+    --card-shadow: 0 15px 35px rgba(47, 65, 86, 0.05);
+    --glow-shadow: 0 0 30px rgba(216, 90, 48, 0.12);
 }
 
 /* ==========================================================================
@@ -50,6 +78,13 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    
+    /* Premium modular background grid overlay */
+    background-image: 
+        linear-gradient(var(--border-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+    background-size: 100px 100px;
+    background-position: center top;
 }
 
 /* Container */
@@ -99,6 +134,14 @@ img {
     font-size: 2.25rem;
     margin-bottom: 3.5rem;
     text-transform: capitalize;
+}
+
+.serif-italic {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--accent-purple);
 }
 
 /* ==========================================================================
@@ -165,13 +208,13 @@ img {
 
 .btn-outline {
     background: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border: 1.5px solid var(--border-color);
     color: var(--text-primary);
 }
 
 .btn-outline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--text-primary);
+    background: var(--bg-card-hover);
+    border-color: var(--border-hover);
     transform: translateY(-2px);
 }
 
@@ -197,10 +240,10 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(5, 4, 10, 0.8);
+    background: var(--bg-header);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--border-header);
     padding: 1rem 0;
     transition: var(--transition);
 }
@@ -909,15 +952,15 @@ img {
 }
 
 .cta-banner {
-    background: linear-gradient(135deg, #581c87 0%, #1e1b4b 100%);
-    border: 1px solid rgba(140, 82, 255, 0.25);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+    border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--card-shadow);
     position: relative;
     overflow: hidden;
 }
@@ -946,13 +989,13 @@ img {
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    background: var(--text-primary);
-    color: var(--accent-purple);
+    background: var(--accent-purple);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.75rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     flex-shrink: 0;
 }
 
@@ -963,7 +1006,7 @@ img {
 }
 
 .cta-text p {
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--text-secondary);
     font-size: 1.05rem;
     max-width: 580px;
 }
@@ -974,24 +1017,24 @@ img {
 }
 
 .btn-cta {
-    background: var(--text-primary);
-    color: var(--bg-deep);
+    background: var(--accent-purple);
+    color: #fff;
     border: none;
     font-weight: 700;
 }
 
 .btn-cta:hover {
-    background: #e5e5e5;
+    background: var(--accent-pink);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+    box-shadow: var(--glow-shadow);
 }
 
 /* ==========================================================================
    Footer
    ========================================================================== */
 .footer {
-    background: #030206;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background: var(--bg-dark);
+    border-top: 1px solid var(--border-color);
     padding: 5rem 0 3rem 0;
 }
 
@@ -1284,12 +1327,12 @@ img {
         width: 75%;
         max-width: 320px;
         height: 100vh;
-        background: #090816;
+        background: var(--bg-dark);
         flex-direction: column;
         justify-content: center;
         gap: 2.5rem;
         transition: right 0.4s ease;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.2);
         z-index: 1050;
     }
     
@@ -1420,5 +1463,440 @@ img {
     
     .contact-modal {
         padding: 2rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   Preloader Styles
+   ========================================================================== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-deep);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.preloader-bg-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--accent-purple);
+    opacity: 0.15;
+    transition: height 0.5s ease-out;
+}
+
+.preloader-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preloader-percent {
+    font-family: var(--font-heading);
+    font-size: clamp(4rem, 12vw, 8rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+.preloader-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+.preloader.loaded {
+    transform: translateY(-100%);
+}
+
+/* ==========================================================================
+   Custom Cursor Styles
+   ========================================================================== */
+@media (min-width: 769px) {
+    * {
+        cursor: none !important;
+    }
+    
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 999999;
+    }
+    
+    .cursor-dot {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent-purple);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.1s ease-out, background-color 0.3s ease;
+        box-shadow: 0 0 10px var(--accent-purple);
+    }
+    
+    .cursor-ring {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid rgba(140, 82, 255, 0.4);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
+    
+    /* Cursor States */
+    .custom-cursor.hovered .cursor-dot {
+        transform: translate(-50%, -50%) scale(1.5);
+        background-color: var(--accent-pink);
+        box-shadow: 0 0 15px var(--accent-pink);
+    }
+    
+    .custom-cursor.hovered .cursor-ring {
+        width: 50px;
+        height: 50px;
+        border-color: var(--accent-pink);
+        background-color: rgba(217, 70, 239, 0.05);
+    }
+}
+
+/* ==========================================================================
+   Grain Noise Overlay
+   ========================================================================== */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ==========================================================================
+   Tech Ticker (Endless scrolling stack)
+   ========================================================================== */
+.tech-ticker-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: rotate(-2deg);
+    margin: 2rem 0;
+}
+
+.tech-ticker-track {
+    display: flex;
+    width: max-content;
+}
+
+.tech-ticker-list {
+    display: flex;
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* Scroll Animations */
+.ticker-left .tech-ticker-list {
+    animation: scroll-left 25s linear infinite;
+}
+
+.ticker-right .tech-ticker-list {
+    animation: scroll-right 25s linear infinite;
+}
+
+/* Pause on hover */
+.tech-ticker-container:hover .tech-ticker-list {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Custom styles for ticker tech cards */
+.tech-ticker-container .tech-card {
+    background: rgba(14, 13, 36, 0.65);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem 2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* ==========================================================================
+   Magnetic transitions
+   ========================================================================== */
+.nav-link, .social-icon, .logo, .btn {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   Navbar Right Layout & Theme Switcher Button
+   ========================================================================== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.theme-btn:hover {
+    background-color: var(--bg-card-hover);
+    transform: rotate(25deg) scale(1.05);
+}
+
+/* ==========================================================================
+   Floating Project Hover Preview Box
+   ========================================================================== */
+.project-hover-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 180px;
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 99998;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.65);
+    transition: opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(140, 82, 255, 0.4);
+    background-color: var(--bg-card);
+}
+
+.project-hover-preview.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.project-hover-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* ==========================================================================
+   Project Detail Modal Custom Styles
+   ========================================================================== */
+.project-detail-modal {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    width: 90%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 0;
+    box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65);
+    transform: scale(0.9);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    scrollbar-width: thin;
+}
+
+.modal-overlay.active .project-detail-modal {
+    transform: scale(1);
+}
+
+.modal-project-img-wrapper {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.project-detail-content {
+    padding: 2.2rem;
+}
+
+.project-detail-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.project-modal-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.modal-section {
+    margin-bottom: 1.8rem;
+}
+
+.modal-section h4 {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-purple);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.modal-features-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.modal-features-list li {
+    position: relative;
+    padding-left: 1.8rem;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.modal-features-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--accent-pink);
+    font-size: 0.85rem;
+}
+
+.modal-role-wrapper {
+    margin-bottom: 2.2rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.2rem;
+}
+
+.modal-role-wrapper span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Make body scrollable custom scrollbar inside modal */
+.project-detail-modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-detail-modal::-webkit-scrollbar-thumb {
+    background-color: var(--accent-purple);
+    border-radius: 10px;
+}
+
+/* Light mode specific card theme overrides */
+:root.light-mode .project-detail-modal {
+    box-shadow: 0 25px 60px rgba(31, 27, 45, 0.12);
+}
+
+:root.light-mode .project-hover-preview {
+    box-shadow: 0 15px 45px rgba(31, 27, 45, 0.12);
+    border-color: rgba(140, 82, 255, 0.25);
+}
+
+:root.light-mode .tech-ticker-container .tech-card {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 20px rgba(31,27,45,0.06);
+}
+
+/* Fix mobile theme alignment */
+@media (max-width: 768px) {
+    .nav-right {
+        order: 2;
+        gap: 0.8rem;
+    }
+    
+    .cv-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+    
+    .theme-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.15rem;
+    }
+    
+    .modal-project-img-wrapper {
+        height: 180px;
+    }
+    
+    .project-detail-content {
+        padding: 1.5rem;
+    }
+    
+    .project-detail-content h3 {
+        font-size: 1.6rem;
     }
 }
